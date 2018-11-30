@@ -1,0 +1,39 @@
+# https://editorconfig.org
+
+# top-most editorconfig file
+root = true
+
+[*]
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 79
+
+# Set default charset
+[*.{js,coffee,py}]
+charset = utf-8
+
+# For all the Python files
+[*.py]
+indent_style = tab
+indent_size = 4
+
+# For all the YAML and JSON files
+[*.{yml,json}]
+indent_style = space
+indent_size = 2
+
+# Indentation override for all JS and coffee files under the lib directory
+[lib/*.{js,coffee}]
+indent_style = space
+indent_size = 2
+
+# Indentation override for all JS and coffee files under the spec directory
+[spec/**.{js,coffee}]
+indent_style = space
+indent_size = 2
+
+
+# Matches the exact files either package.json or .travis.yml
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
